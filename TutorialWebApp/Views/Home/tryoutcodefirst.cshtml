@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Try Out Code First Page";
+}
+@model IEnumerable<TutorialWebApp.Models.Student>
+
+<div class="text-center">
+    <h2>CODE FIRST</h2>
+    @foreach (var st in Model)
+    {
+        <h3>@st.Name @st.Age</h3>
+    }
+
+</div>

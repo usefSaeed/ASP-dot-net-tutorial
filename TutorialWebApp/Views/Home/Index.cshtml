@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model TutorialWebApp.Models.Enrollment
+
+<div class="text-center">
+    <h1 class="display-4">@Model.EnrolledCourse.Name</h1>
+    <h4>@Model.EnrolledCourse.Description</h4>
+    @foreach (var st in Model.Students)
+    {
+        <h3>@st.Name</h3>
+    }
+
+</div>

@@ -29,9 +29,17 @@ namespace TutorialWebAppY.Models
                 Name = "Mostafa Mohsem"
             };
 
+            Student student4 = new Student()
+            {
+                Id = 4,
+                Age = 17,
+                Name = "Hamada Eldod"
+            };
+
             context.Students.Add(student1);
             context.Students.Add(student2);
             context.Students.Add(student3);
+            context.Students.Add(student4);
 
             context.SaveChanges();
 

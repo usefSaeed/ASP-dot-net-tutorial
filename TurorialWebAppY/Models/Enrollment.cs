@@ -12,19 +12,15 @@ namespace TurorialWebAppY.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Course
+    public partial class Enrollment
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Course()
-        {
-            this.Enrollments = new HashSet<Enrollment>();
-        }
-    
+        public int EnrollemntId { get; set; }
         public int CourseId { get; set; }
-        public string CourseName { get; set; }
-        public int CreditHours { get; set; }
+        public int StudentId { get; set; }
+        public Nullable<decimal> Grade { get; set; }
+        public Nullable<System.DateTime> EnrollemntDate { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Enrollment> Enrollments { get; set; }
+        public virtual Course Course { get; set; }
+        public virtual Student Student { get; set; }
     }
 }
